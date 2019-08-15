@@ -1,0 +1,165 @@
+body {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  display: flex;
+  height: 100%;
+
+  max-width: 100%;
+  width: 100%;
+  min-width: 250px;
+  margin: 0 auto;
+  //   width: 300px;
+  //   flex-flow: row wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+}
+
+.quizContainer {
+  padding: 5px;
+  width: 100%;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.question {
+  // margin-bottom: 30px;
+  font-size: 12em;
+  color: #494949;
+  //   border: solid;
+  align-items: center;
+}
+
+.flexCol {
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+}
+
+.answersContainer {
+  // margin-top: 30px;
+  padding: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  display: flex;
+  // width: calc(100% - 20px);
+  align-items: center;
+}
+
+.singleAnswer {
+  align-self: flex-end;
+  flex-wrap: nowrap;
+  display: flex;
+
+  border-radius: 20px;
+  border: solid;
+  border-width: 2px;
+  font-size: 3em;
+
+  text-align: center;
+  padding: 0 80px;
+}
+.wrongAnswer {
+  background: #f25757;
+  align-self: flex-end;
+  flex-wrap: nowrap;
+  display: flex;
+
+  border-radius: 20px;
+  border: solid;
+  border-width: 2px;
+  font-size: 3em;
+
+  text-align: center;
+  padding: 0 80px;
+}
+.selectedAnswer {
+  background: #f2e863;
+  align-self: flex-end;
+  flex-wrap: nowrap;
+  display: flex;
+
+  border-radius: 20px;
+  border: solid;
+  border-width: 2px;
+  font-size: 3em;
+
+  text-align: center;
+  padding: 0 80px;
+}
+.correctAnswer {
+  background: #36f5d5;
+  align-self: flex-end;
+  flex-wrap: nowrap;
+  display: flex;
+
+  border-radius: 20px;
+  border: solid;
+  border-width: 2px;
+  font-size: 3em;
+
+  text-align: center;
+  padding: 0 80px;
+}
+
+.answerContainer {
+  padding: 0;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.submitAnswerButton {
+  background: #f2e863;
+  border-radius: 30%;
+  width: 50px;
+  // background: #EAF2E3
+}
+
+// .maisubmitAnswerButtonn {
+//   //   border: solid;
+//   flex: 1;
+//   font-size: 12em;
+//   color: #494949;
+//   //   border: solid;
+//   align-items: center;
+// }
+
+.answerUl {
+  padding: 0;
+}
+
+.optionList {
+  flex: 1;
+  display: flex;
+  flex-direction: row wrap;
+  //   //   justify-content: space-evenly;
+  justify-content: center;
+  //   border-top: solid 1px;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
+  //   flex-flow: column;
+}
+.option {
+  font-size: 2em;
+  margin: 10px;
+  border-radius: 30px;
+  border: solid;
+  border-width: 2px;
+  //   width: 100px;
+  //   flex-grow: 2;
+
+  vertical-align: middle;
+  padding: 5%;
+  //   height: 80px;
+
+  //   flex-direction: row wrap;
+}

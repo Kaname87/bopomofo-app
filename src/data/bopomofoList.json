@@ -1,0 +1,297 @@
+[
+  {
+    "bopomofo": "ㄅ",
+    "pinin": "b",
+    "articulationType": "子音",
+    "pointOfArticulation": "唇音",
+    "aspirationType": "無気音"
+  },
+  {
+    "bopomofo": "ㄆ",
+    "pinin": "p",
+    "articulationType": "子音",
+    "pointOfArticulation": "唇音",
+    "aspirationType": "有気音"
+  },
+  {
+    "bopomofo": "ㄇ",
+    "pinin": "m",
+    "articulationType": "子音",
+    "pointOfArticulation": "唇音"
+  },
+  {
+    "bopomofo": "ㄈ",
+    "pinin": "f",
+    "articulationType": "子音",
+    "pointOfArticulation": "唇音"
+  },
+
+  {
+    "bopomofo": "ㄉ",
+    "pinin": "d",
+    "articulationType": "子音",
+    "pointOfArticulation": "舌尖音",
+    "aspirationType": "無気音"
+  },
+  {
+    "bopomofo": "ㄊ",
+    "pinin": "t",
+    "articulationType": "子音",
+    "pointOfArticulation": "舌尖音",
+    "aspirationType": "有気音"
+  },
+  {
+    "bopomofo": "ㄋ",
+    "pinin": "n",
+    "articulationType": "子音",
+    "pointOfArticulation": "舌尖音"
+  },
+  {
+    "bopomofo": "ㄌ",
+    "pinin": "l",
+    "articulationType": "子音",
+    "pointOfArticulation": "舌尖音"
+  },
+
+  {
+    "bopomofo": "ㄍ",
+    "pinin": "g",
+    "articulationType": "子音",
+    "pointOfArticulation": "舌根音",
+    "aspirationType": "無気音"
+  },
+  {
+    "bopomofo": "ㄎ",
+    "pinin": "k",
+    "articulationType": "子音",
+    "pointOfArticulation": "舌根音",
+    "aspirationType": "有気音"
+  },
+  {
+    "bopomofo": "ㄏ",
+    "pinin": "h",
+    "articulationType": "子音",
+    "pointOfArticulation": "舌根音"
+  },
+
+  {
+    "bopomofo": "ㄐ",
+    "pinin": "j",
+    "articulationType": "子音",
+    "pointOfArticulation": "舌面音",
+    "aspirationType": "無気音"
+  },
+  {
+    "bopomofo": "ㄑ",
+    "pinin": "q",
+    "articulationType": "子音",
+    "pointOfArticulation": "舌面音",
+    "aspirationType": "有気音"
+  },
+  {
+    "bopomofo": "ㄒ",
+    "pinin": "x",
+    "articulationType": "子音",
+    "pointOfArticulation": "舌面音"
+  },
+
+  {
+    "bopomofo": "ㄓ",
+    "pinin": "zh",
+    "articulationType": "子音",
+    "pointOfArticulation": "そり舌音",
+    "aspirationType": "無気音"
+  },
+  {
+    "bopomofo": "ㄔ",
+    "pinin": "ch",
+    "articulationType": "子音",
+    "pointOfArticulation": "そり舌音",
+    "aspirationType": "有気音"
+  },
+  {
+    "bopomofo": "ㄕ",
+    "pinin": "sh",
+    "articulationType": "子音",
+    "pointOfArticulation": "そり舌音"
+  },
+  {
+    "bopomofo": "ㄖ",
+    "pinin": "r",
+    "articulationType": "子音",
+    "pointOfArticulation": "そり舌音"
+  },
+
+  {
+    "bopomofo": "ㄗ",
+    "pinin": "z",
+    "articulationType": "子音",
+    "pointOfArticulation": "舌歯音",
+    "aspirationType": "無気音"
+  },
+  {
+    "bopomofo": "ㄘ",
+    "pinin": "c",
+    "articulationType": "子音",
+    "pointOfArticulation": "舌歯音",
+    "aspirationType": "有気音"
+  },
+  {
+    "bopomofo": "ㄙ",
+    "pinin": "s",
+    "articulationType": "子音",
+    "pointOfArticulation": "舌歯音"
+  },
+
+  {
+    "bopomofo": "ㄚ",
+    "pinin": "a",
+    "articulationType": "母音"
+  },
+  {
+    "bopomofo": "ㄛ",
+    "pinin": "o",
+    "articulationType": "母音"
+  },
+  {
+    "bopomofo": "ㄜ",
+    "pinin": "e",
+    "articulationType": "母音"
+  },
+  {
+    "bopomofo": "ㄝ",
+    "pinin": "ê",
+    "articulationType": "母音"
+  },
+  {
+    "bopomofo": "ㄞ",
+    "pinin": "ai",
+    "articulationType": "母音"
+  },
+  {
+    "bopomofo": "ㄟ",
+    "pinin": "ei",
+    "articulationType": "母音"
+  },
+  {
+    "bopomofo": "ㄠ",
+    "pinin": "ao",
+    "articulationType": "母音"
+  },
+
+  {
+    "bopomofo": "ㄡ",
+    "pinin": "ou",
+    "articulationType": "母音"
+  },
+
+  {
+    "bopomofo": "ㄢ",
+    "pinin": "an",
+    "articulationType": "母音"
+  },
+  {
+    "bopomofo": "ㄣ",
+    "pinin": "en",
+    "articulationType": "母音"
+  },
+  {
+    "bopomofo": "ㄤ",
+    "pinin": "ang",
+    "articulationType": "母音"
+  },
+  {
+    "bopomofo": "ㄥ",
+    "pinin": "eng",
+    "articulationType": "母音"
+  },
+
+  {
+    "bopomofo": "ㄦ",
+    "pinin": "er",
+    "articulationType": "母音"
+  },
+  {
+    "bopomofo": "ㄧ",
+    "pinin": "i/y",
+    "articulationType": "母音"
+  },
+
+  {
+    "bopomofo": "ㄨ",
+    "pinin": "u/w",
+    "articulationType": "母音"
+  },
+
+  {
+    "bopomofo": "ㄩ",
+    "pinin": "ü/yu",
+    "articulationType": "母音"
+  },
+  {
+    "bopomofo": "ㄧㄡ",
+    "pinin": "you, -iu",
+    "articulationType": "母音",
+    "explanation": "(i + ou)"
+  },
+  {
+    "bopomofo": "ㄨㄟ",
+    "pinin": "wei, -ui",
+    "articulationType": "母音",
+    "explanation": "(u + ei)"
+  },
+  {
+    "bopomofo": "ㄧㄝ",
+    "pinin": "ye, -ie",
+    "articulationType": "母音",
+    "explanation": "(i + ê)"
+  },
+  {
+    "bopomofo": "ㄩㄝ",
+    "pinin": "yue, -üe",
+    "articulationType": "母音",
+    "explanation": "(ü + ê)"
+  },
+
+  {
+    "bopomofo": "ㄧㄣ",
+    "pinin": "yin, -in",
+    "articulationType": "母音",
+    "explanation": "(i + en)"
+  },
+
+  {
+    "bopomofo": "ㄨㄣ",
+    "pinin": "wen, -un",
+    "articulationType": "母音",
+    "explanation": "(u + en)"
+  },
+
+  {
+    "bopomofo": "ㄩㄣ",
+    "pinin": "yun, -ün",
+    "articulationType": "母音",
+    "explanation": "(ü + en)"
+  },
+
+  {
+    "bopomofo": "ㄧㄥ",
+    "pinin": "ying, -ing",
+    "articulationType": "母音",
+    "explanation": "(i + eng)"
+  },
+
+  {
+    "bopomofo": "ㄨㄥ",
+    "pinin": "weng, -ong",
+    "articulationType": "母音",
+    "explanation": "(u + eng)"
+  },
+
+  {
+    "bopomofo": "ㄩㄥ",
+    "pinin": "yong, -iong",
+    "articulationType": "母音",
+    "explanation": "(ü + eng)"
+  }
+]
