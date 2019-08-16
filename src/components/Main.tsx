@@ -23,23 +23,18 @@ type questionStateType = {
 const Main = () => {
   const [quizCount, setQuizCount] = useState(0);
   const [histories, setHistories] = useState([]);
-  const [answerSubmitted, setAnswerSubmitted] = useState(true);
-  // const [initiated, setInitiated] = useState(false);
-  // const [index, setIndex] = useState(0);
 
   const [question, setQuestion] = useState<questionStateType>({});
   const [selectedBopomofoList, setSelectedBopomofoList] = useState<any[]>([]);
 
   // Update Question when quizCount is updated
   useEffect(() => {
-    console.log("hey!");
     setQuestion(randomSelect(bopomofoListSource));
   }, [quizCount]);
 
   // Update
   useEffect(() => {
     const options = getRandomOptions(bopomofoListSource, question);
-    console.log("opy", options);
     if (question) {
       setSelectedBopomofoList([question, ...options]);
     }

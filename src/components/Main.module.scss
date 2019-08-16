@@ -20,7 +20,7 @@ body {
 }
 
 .quizContainer {
-  padding: 5px;
+  // padding: 5px;
   width: 100%;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -28,9 +28,38 @@ body {
   align-items: center;
 }
 
+.buttonContainer {
+  padding: 5px;
+  width: 100%;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+.button {
+  margin: 0 20px;
+  width: 100px;
+  height: 50px;
+  // background: #494949;
+  // background: #f2e863;
+  // border-radius: 50%;
+  // flex-wrap: nowrap;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+
+// .submitAnswerButton {
+//   background: #f2e863;
+//   border-radius: 30%;
+//   width: 50px;
+//   // background: #EAF2E3
+// }
+
 .question {
-  // margin-bottom: 30px;
-  font-size: 12em;
+  font-size: 10em;
+  height: 200px;
+  padding: 1px;
   color: #494949;
   //   border: solid;
   align-items: center;
@@ -45,6 +74,7 @@ body {
 .answersContainer {
   // margin-top: 30px;
   padding: 0;
+  margin-top: 0;
   flex-direction: row;
   flex-wrap: wrap;
   position: relative;
@@ -53,73 +83,37 @@ body {
   align-items: center;
 }
 
-.singleAnswer {
-  align-self: flex-end;
-  flex-wrap: nowrap;
-  display: flex;
-
+@mixin answer {
+  list-style-type: none;
   border-radius: 20px;
   border: solid;
   border-width: 2px;
   font-size: 3em;
 
   text-align: center;
-  padding: 0 80px;
+  width: 250px;
+}
+
+.singleAnswer {
+  @include answer;
 }
 .wrongAnswer {
+  @include answer;
   background: #f25757;
-  align-self: flex-end;
-  flex-wrap: nowrap;
-  display: flex;
-
-  border-radius: 20px;
-  border: solid;
-  border-width: 2px;
-  font-size: 3em;
-
-  text-align: center;
-  padding: 0 80px;
 }
 .selectedAnswer {
+  @include answer;
   background: #f2e863;
-  align-self: flex-end;
-  flex-wrap: nowrap;
-  display: flex;
-
-  border-radius: 20px;
-  border: solid;
-  border-width: 2px;
-  font-size: 3em;
-
-  text-align: center;
-  padding: 0 80px;
 }
 .correctAnswer {
+  @include answer;
   background: #36f5d5;
-  align-self: flex-end;
-  flex-wrap: nowrap;
-  display: flex;
-
-  border-radius: 20px;
-  border: solid;
-  border-width: 2px;
-  font-size: 3em;
-
-  text-align: center;
-  padding: 0 80px;
 }
 
 .answerContainer {
   padding: 0;
   cursor: pointer;
   flex-direction: column;
-}
-
-.submitAnswerButton {
-  background: #f2e863;
-  border-radius: 30%;
-  width: 50px;
-  // background: #EAF2E3
 }
 
 // .maisubmitAnswerButtonn {

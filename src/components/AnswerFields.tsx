@@ -32,24 +32,6 @@ const AnswerFields: React.FC<questionInfo> = ({
 
   return (
     <div className={styles.quizContainer}>
-      <button
-        onClick={() => {
-          setShowAnswer(!showAnswer);
-        }}
-        className={styles.submitAnswerButton}
-        disabled={showAnswer || selectedOption.length === 0}
-      >
-        Submit
-      </button>
-
-      <button
-        onClick={() => setQuizCount(quizCount + 1)}
-        className={styles.submitAnswerButton}
-        disabled={!showAnswer}
-      >
-        Next
-      </button>
-
       <OptionList
         bopomofoList={bopomofoList}
         question={question}
@@ -57,6 +39,25 @@ const AnswerFields: React.FC<questionInfo> = ({
         setSelectedOption={setSelectedOption}
         showAnswer={showAnswer}
       />
+      <div className={styles.buttonContainer}>
+        <button
+          onClick={() => {
+            setShowAnswer(!showAnswer);
+          }}
+          className={styles.button}
+          disabled={showAnswer || selectedOption.length === 0}
+        >
+          Check
+        </button>
+
+        <button
+          onClick={() => setQuizCount(quizCount + 1)}
+          className={styles.button}
+          disabled={!showAnswer}
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 };
