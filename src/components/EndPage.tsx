@@ -60,7 +60,7 @@ const EndPage = () => {
             }
           >
             {history.isCorrect ? (
-              <XiaoLongBao width={30} height={30} fill={"#36f5d5"} />
+              <XiaoLongBao width={30} height={30} fill={"#1ecd97"} />
             ) : (
               "×"
             )}
@@ -70,34 +70,14 @@ const EndPage = () => {
     });
   };
 
-  const resultList = (histories: HistoryType[]) => {
-    return histories.map(history => {
-      if (typeof history.question === "undefined") {
-        return;
-      }
-      return (
-        <li key={history.question.pinyin} className={styles.resultList}>
-          {history.question.bopomofo} {history.question.pinyin}
-          {history.question.pinyin === history.selectedOption
-            ? " Correct"
-            : " Wrong"}
-        </li>
-      );
-    });
-  };
-
-  const resultUl = (histories: HistoryType[] | undefined) => {
-    if (typeof histories !== "undefined") {
-      return <ul>{resultList(histories)}</ul>;
-    }
-  };
-
   return (
     <div className={styles.quizContainer}>
       {resultTable(histories)}
-      <button className={styles.button} onClick={() => reStart()}>
-        Re-Start
-      </button>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button} onClick={() => reStart()}>
+          Re-Start
+        </button>
+      </div>
     </div>
   );
 };

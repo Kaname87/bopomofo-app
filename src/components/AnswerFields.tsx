@@ -39,30 +39,32 @@ const AnswerFields: React.FC<questionInfo> = ({ bopomofoList, question }) => {
         showAnswer={showAnswer}
       />
       <div className={styles.buttonContainer}>
-        <button
-          onClick={() => {
-            setShowAnswer(!showAnswer);
-          }}
-          className={styles.button}
-          disabled={showAnswer || selectedOption.length === 0}
-        >
-          Check
-        </button>
-
-        <button
-          onClick={() => {
-            if (
-              typeof quizCount === "number" &&
-              typeof setQuizCount == "function"
-            ) {
-              setQuizCount(quizCount + 1);
-            }
-          }}
-          className={styles.button}
-          disabled={!showAnswer}
-        >
-          Next
-        </button>
+        {showAnswer ? (
+          <button
+            onClick={() => {
+              if (
+                typeof quizCount === "number" &&
+                typeof setQuizCount == "function"
+              ) {
+                setQuizCount(quizCount + 1);
+              }
+            }}
+            className={styles.button}
+            disabled={!showAnswer}
+          >
+            Next
+          </button>
+        ) : (
+          <button
+            onClick={() => {
+              setShowAnswer(!showAnswer);
+            }}
+            className={styles.button}
+            disabled={showAnswer || selectedOption.length === 0}
+          >
+            Check
+          </button>
+        )}
       </div>
     </div>
   );
