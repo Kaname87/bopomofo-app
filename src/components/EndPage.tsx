@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import styles from "./Main.module.scss";
 import QuizContext from "../context/quizContext";
+import XiaoLongBao from "./SVG/xiaolongbao";
 import { HistoryType } from "../types";
 const START = "START";
 
@@ -58,7 +59,11 @@ const EndPage = () => {
                 : styles.resultMarkWrong
             }
           >
-            {history.isCorrect ? "○" : "×"}
+            {history.isCorrect ? (
+              <XiaoLongBao width={30} height={30} fill={"#36f5d5"} />
+            ) : (
+              "×"
+            )}
           </td>
         </tr>
       );

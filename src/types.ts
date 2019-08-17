@@ -1,3 +1,9 @@
+export type SVGType = {
+  width: number;
+  height: number;
+  fill?: string;
+};
+
 export type QuestionType = {
   bopomofo?: string;
   pinyin?: string;
