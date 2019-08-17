@@ -1,61 +1,44 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState } from "react";
 import styles from "./Main.module.scss";
-import AnswerFields from "./AnswerFields";
-import bopomofoListSource from "../data/bopomofoList.json";
+
+import StartPage from "./StartPage";
+import OnGoingPage from "./OnGoingPage";
+import EndPage from "./EndPage";
 import QuizContext from "../context/quizContext";
 
-const randomSelect = (array: any[]) => {
-  return array[Math.floor(Math.random() * array.length)];
-};
+import { HistoryType, GameStatusType, QuizContextType } from "../types";
 
-const getRandomOptions = (array: any[], question: any) => {
-  const copy = array.slice().filter(v => v !== question);
-  return [...Array(3)].map(
-    () => copy.splice(Math.floor(Math.random() * copy.length), 1)[0]
-  );
-};
-
-type questionStateType = {
-  title?: string;
-  bopomofo?: string;
-};
+const START = "START";
+const ONGOING = "ONGOING";
 
 const Main = () => {
-  const [quizCount, setQuizCount] = useState(0);
-  const [histories, setHistories] = useState([]);
+  const [gameStatus, setGameStatus] = useState<GameStatusType>(START);
 
-  const [question, setQuestion] = useState<questionStateType>({});
-  const [selectedBopomofoList, setSelectedBopomofoList] = useState<any[]>([]);
+  const [quizCount, setQuizCount] = useState<number>(0);
 
-  // Update Question when quizCount is updated
-  useEffect(() => {
-    setQuestion(randomSelect(bopomofoListSource));
-  }, [quizCount]);
+  const [histories, setHistories] = useState<HistoryType[]>([]);
 
-  // Update
-  useEffect(() => {
-    const options = getRandomOptions(bopomofoListSource, question);
-    if (question) {
-      setSelectedBopomofoList([question, ...options]);
-    }
-  }, [question]);
+  const quizContext: QuizContextType = {
+    quizCount,
+    setQuizCount,
+    histories,
+    setHistories,
+    gameStatus,
+    setGameStatus
+  };
 
-  return question && selectedBopomofoList.length > 0 ? (
-    <QuizContext.Provider
-      value={{ quizCount, setQuizCount, histories, setHistories }}
-    >
-      <div className={styles.wrapper}>
-        <div className={styles.quizContainer}>
-          <div className={styles.question}>{question.bopomofo}</div>
-          <AnswerFields
-            bopomofoList={selectedBopomofoList}
-            question={question}
-          />
-        </div>
-      </div>
+  const mainPage =
+    gameStatus === START ? (
+      <StartPage />
+    ) : gameStatus === ONGOING ? (
+      <OnGoingPage />
+    ) : (
+      <EndPage />
+    );
+  return (
+    <QuizContext.Provider value={quizContext}>
+      <div className={styles.wrapper}>{mainPage}</div>
     </QuizContext.Provider>
-  ) : (
-    <div>Now Loading</div>
   );
 };
 

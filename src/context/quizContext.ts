@@ -1,9 +1,10 @@
 import React from "react";
 
-const QuizContext = React.createContext<any>({});
+import {
+  //HistoryType, GameStatusType,
+  QuizContextType
+} from "../types";
 
-// const QuizContext = React.createContext({});
+const QuizContext = React.createContext<QuizContextType>({});
 
-// export const UserProvider = UserContext.Provider;
-// export const UserConsumer = UserContext.Consumer;
 export default QuizContext;

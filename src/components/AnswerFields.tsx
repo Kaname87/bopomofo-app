@@ -2,31 +2,26 @@ import React, { useState, useContext, useEffect } from "react";
 import styles from "./Main.module.scss";
 import OptionList from "./OptionList";
 import QuizContext from "../context/quizContext";
+import { QuizContextType } from "../types";
 
 interface questionInfo {
   bopomofoList: any;
   question: any;
-  gameState?: any;
-  setQuizCount?: any;
 }
 
-const AnswerFields: React.FC<questionInfo> = ({
-  bopomofoList,
-  question
-  //   gameState
-}) => {
-  //   const [answerSubmitted, setAnswerSubmitted] = useState(false);
+const AnswerFields: React.FC<questionInfo> = ({ bopomofoList, question }) => {
   const [showAnswer, setShowAnswer] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
-  const { quizCount, setQuizCount, histories, setHistories } = useContext(
-    QuizContext
-  );
+  const { quizCount, setQuizCount, histories, setHistories } = useContext<
+    QuizContextType
+  >(QuizContext);
 
   useEffect(() => {
-    if (selectedOption.length > 0) {
+    if (selectedOption.length > 0 && setHistories && histories) {
       setSelectedOption("");
       setShowAnswer(false);
-      setHistories([{ question, selectedOption }, ...histories]);
+      const newHistories = [{ question, selectedOption }, ...histories];
+      setHistories(newHistories);
     }
   }, [quizCount]);
 
@@ -51,7 +46,14 @@ const AnswerFields: React.FC<questionInfo> = ({
         </button>
 
         <button
-          onClick={() => setQuizCount(quizCount + 1)}
+          onClick={() => {
+            if (
+              typeof quizCount === "number" &&
+              typeof setQuizCount == "function"
+            ) {
+              setQuizCount(quizCount + 1);
+            }
+          }}
           className={styles.button}
           disabled={!showAnswer}
         >

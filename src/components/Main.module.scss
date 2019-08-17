@@ -83,6 +83,10 @@ body {
   align-items: center;
 }
 
+.resultList {
+  list-style-type: none;
+}
+
 @mixin answer {
   list-style-type: none;
   border-radius: 20px;
