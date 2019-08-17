@@ -5,6 +5,27 @@ import AnswerFields from "./AnswerFields";
 import bopomofoListSource from "../data/bopomofoList.json";
 import QuizContext from "../context/quizContext";
 // import { endianness } from "os";
+const END_QUIZ_COUNT = 3;
+
+const createQuizList = (source: any[]) => {
+  // let source = array.slice();
+  let quizOptionList: any[] = [];
+
+  // for (let index = 0; index < source.length; index++) {
+  //   const element = array[index];
+  // }
+  for (let i = 1; i <= END_QUIZ_COUNT; i++) {
+    while (true) {
+      let quizOpt = randomSelect(source);
+      if (!quizOptionList.includes(quizOpt)) {
+        quizOptionList.push(quizOpt);
+        break;
+      }
+    }
+  }
+
+  return quizOptionList;
+};
 
 const randomSelect = (array: any[]) => {
   return array[Math.floor(Math.random() * array.length)];
@@ -24,7 +45,7 @@ type questionStateType = {
 
 // const START = "START";
 // const ONGOING = "ONGOING";
-const END_QUIZ_COUNT = 3;
+
 const END = "END";
 
 const OnGoingPage = () => {
@@ -33,21 +54,42 @@ const OnGoingPage = () => {
   const [question, setQuestion] = useState<questionStateType>({});
   const [selectedBopomofoList, setSelectedBopomofoList] = useState<any[]>([]);
 
+  const [quizList, setQuizList] = useState<any[]>([]);
+
+  const updateQuestionAndOption = (quizList: any[], quizCount: number) => {
+    const question = quizList[quizCount];
+
+    setQuestion(question);
+
+    // getRandomOptions()
+    setSelectedBopomofoList([
+      question,
+      ...getRandomOptions(bopomofoListSource, question)
+    ]);
+  };
+  // Update Question when quizCount is updated
+  useEffect(() => {
+    setQuizList(createQuizList(bopomofoListSource));
+  }, []);
+
+  useEffect(() => {
+    // setQuizList(createQuizList(bopomofoListSource));
+    if (quizList.length > 0 && typeof quizCount == "number") {
+      updateQuestionAndOption(quizList, quizCount);
+    }
+  }, [quizList]);
+
   // Update Question when quizCount is updated
   useEffect(() => {
     if (quizCount === END_QUIZ_COUNT && typeof setGameStatus === "function") {
       return setGameStatus(END);
     }
-    setQuestion(randomSelect(bopomofoListSource));
-  }, [quizCount]);
-
-  // Update
-  useEffect(() => {
-    if (question.bopomofo) {
-      const options = getRandomOptions(bopomofoListSource, question);
-      setSelectedBopomofoList([question, ...options]);
+    // setQuestion(randomSelect(bopomofoListSource));
+    if (typeof quizCount === "number" && quizList.length > 0) {
+      updateQuestionAndOption(quizList, quizCount);
     }
-  }, [question]);
+    // setSelectedBopomofoList([question, ...options]);
+  }, [quizCount]);
 
   const questionIsReady = question && selectedBopomofoList.length > 0;
 
@@ -59,7 +101,7 @@ const OnGoingPage = () => {
     </div>
   ) : (
     // </div>
-    <div>Now Loading</div>
+    <div>Now Loading...</div>
   );
 };
 

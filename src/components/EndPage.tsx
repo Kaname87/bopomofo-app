@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, Fragment } from "react";
 import styles from "./Main.module.scss";
 import QuizContext from "../context/quizContext";
 import XiaoLongBao from "./SVG/xiaolongbao";
@@ -45,7 +45,7 @@ const EndPage = () => {
   const resultTableBody = (histories: HistoryType[]) => {
     return histories.reverse().map(history => {
       if (history.question === undefined) {
-        return;
+        return <Fragment></Fragment>;
       }
       return (
         <tr key={history.question.pinyin} className={styles.resultTBody}>

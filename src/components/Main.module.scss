@@ -44,6 +44,13 @@ $selectd-color: #d4f0fd;
     border-width 0.3s, border-color 0.3s;
   transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s,
     border-color 0.3s;
+
+  &:disabled,
+  &[disabled] {
+    border: 1px solid #fdfdfd;
+    background-color: #cccccc;
+    color: #494949;
+  }
 }
 
 body {
@@ -54,9 +61,9 @@ body {
   color: #62706c;
   font-size: 100%;
   line-height: 1.25;
-  padding: 25px 0;
-  border-right: 25px solid #fff;
-  border-left: 25px solid #fff;
+  // padding: 25px 0;
+  // border-right: 25px solid #fff;
+  // border-left: 25px solid #fff;
   font-family: "Lato", Arial, sans-serif;
 }
 
@@ -288,3 +295,5 @@ table td {
 //   // position: absolute;
 //   // width: 1px;
 // }
+
+// https://tympanus.net/Tutorials/CircularProgressButton/
