@@ -24,7 +24,7 @@ type questionStateType = {
 
 // const START = "START";
 // const ONGOING = "ONGOING";
-const END_QUIZ_COUNT = 2;
+const END_QUIZ_COUNT = 3;
 const END = "END";
 
 const OnGoingPage = () => {

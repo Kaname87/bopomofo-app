@@ -20,7 +20,11 @@ const AnswerFields: React.FC<questionInfo> = ({ bopomofoList, question }) => {
     if (selectedOption.length > 0 && setHistories && histories) {
       setSelectedOption("");
       setShowAnswer(false);
-      const newHistories = [{ question, selectedOption }, ...histories];
+      const isCorrect = question.pinyin === selectedOption;
+      const newHistories = [
+        { question, selectedOption, isCorrect },
+        ...histories
+      ];
       setHistories(newHistories);
     }
   }, [quizCount]);

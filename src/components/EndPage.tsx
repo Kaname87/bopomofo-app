@@ -22,20 +22,66 @@ const EndPage = () => {
     }
   };
 
-  const resultList = (histories: HistoryType[]) => {
-    return histories.map(history => {
+  const resultTable = (histories: HistoryType[] | undefined) => {
+    if (typeof histories === "undefined") {
+      return;
+    }
+    return (
+      <table>
+        <thead>
+          <tr>
+            <th className={styles.resultWideCol}>注音</th>
+            <th className={styles.resultWideCol}>Pinyin</th>
+            <th className={styles.resultWideCol}>あなたの回答</th>
+            <th className={styles.resultNarrowCol}>結果</th>
+          </tr>
+        </thead>
+        <tbody>{resultTableBody(histories)}</tbody>
+      </table>
+    );
+  };
+
+  const resultTableBody = (histories: HistoryType[]) => {
+    return histories.reverse().map(history => {
       if (history.question === undefined) {
-        return <div></div>;
+        return;
       }
       return (
-        <li key={history.question.pinin} className={styles.resultList}>
-          {history.question.bopomofo} {history.question.pinin}
+        <tr key={history.question.pinyin} className={styles.resultTBody}>
+          <td className={styles.resultBopomofo}>{history.question.bopomofo}</td>
+          <td>{history.question.pinyin}</td>
+          <td>{history.selectedOption}</td>
+          <td
+            className={
+              history.isCorrect
+                ? styles.resultMarkCorrect
+                : styles.resultMarkWrong
+            }
+          >
+            {history.isCorrect ? "○" : "×"}
+          </td>
+        </tr>
+      );
+    });
+  };
+
+  const resultList = (histories: HistoryType[]) => {
+    return histories.map(history => {
+      if (typeof history.question === "undefined") {
+        return;
+      }
+      return (
+        <li key={history.question.pinyin} className={styles.resultList}>
+          {history.question.bopomofo} {history.question.pinyin}
+          {history.question.pinyin === history.selectedOption
+            ? " Correct"
+            : " Wrong"}
         </li>
       );
     });
   };
 
-  const resultL = (histories: HistoryType[] | undefined) => {
+  const resultUl = (histories: HistoryType[] | undefined) => {
     if (typeof histories !== "undefined") {
       return <ul>{resultList(histories)}</ul>;
     }
@@ -43,7 +89,7 @@ const EndPage = () => {
 
   return (
     <div className={styles.quizContainer}>
-      {resultL(histories)}
+      {resultTable(histories)}
       <button className={styles.button} onClick={() => reStart()}>
         Re-Start
       </button>

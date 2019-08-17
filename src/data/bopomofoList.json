@@ -1,296 +1,296 @@
 [
   {
     "bopomofo": "ㄅ",
-    "pinin": "b",
+    "pinyin": "b",
     "articulationType": "子音",
     "pointOfArticulation": "唇音",
     "aspirationType": "無気音"
   },
   {
     "bopomofo": "ㄆ",
-    "pinin": "p",
+    "pinyin": "p",
     "articulationType": "子音",
     "pointOfArticulation": "唇音",
     "aspirationType": "有気音"
   },
   {
     "bopomofo": "ㄇ",
-    "pinin": "m",
+    "pinyin": "m",
     "articulationType": "子音",
     "pointOfArticulation": "唇音"
   },
   {
     "bopomofo": "ㄈ",
-    "pinin": "f",
+    "pinyin": "f",
     "articulationType": "子音",
     "pointOfArticulation": "唇音"
   },
 
   {
     "bopomofo": "ㄉ",
-    "pinin": "d",
+    "pinyin": "d",
     "articulationType": "子音",
     "pointOfArticulation": "舌尖音",
     "aspirationType": "無気音"
   },
   {
     "bopomofo": "ㄊ",
-    "pinin": "t",
+    "pinyin": "t",
     "articulationType": "子音",
     "pointOfArticulation": "舌尖音",
     "aspirationType": "有気音"
   },
   {
     "bopomofo": "ㄋ",
-    "pinin": "n",
+    "pinyin": "n",
     "articulationType": "子音",
     "pointOfArticulation": "舌尖音"
   },
   {
     "bopomofo": "ㄌ",
-    "pinin": "l",
+    "pinyin": "l",
     "articulationType": "子音",
     "pointOfArticulation": "舌尖音"
   },
 
   {
     "bopomofo": "ㄍ",
-    "pinin": "g",
+    "pinyin": "g",
     "articulationType": "子音",
     "pointOfArticulation": "舌根音",
     "aspirationType": "無気音"
   },
   {
     "bopomofo": "ㄎ",
-    "pinin": "k",
+    "pinyin": "k",
     "articulationType": "子音",
     "pointOfArticulation": "舌根音",
     "aspirationType": "有気音"
   },
   {
     "bopomofo": "ㄏ",
-    "pinin": "h",
+    "pinyin": "h",
     "articulationType": "子音",
     "pointOfArticulation": "舌根音"
   },
 
   {
     "bopomofo": "ㄐ",
-    "pinin": "j",
+    "pinyin": "j",
     "articulationType": "子音",
     "pointOfArticulation": "舌面音",
     "aspirationType": "無気音"
   },
   {
     "bopomofo": "ㄑ",
-    "pinin": "q",
+    "pinyin": "q",
     "articulationType": "子音",
     "pointOfArticulation": "舌面音",
     "aspirationType": "有気音"
   },
   {
     "bopomofo": "ㄒ",
-    "pinin": "x",
+    "pinyin": "x",
     "articulationType": "子音",
     "pointOfArticulation": "舌面音"
   },
 
   {
     "bopomofo": "ㄓ",
-    "pinin": "zh",
+    "pinyin": "zh",
     "articulationType": "子音",
     "pointOfArticulation": "そり舌音",
     "aspirationType": "無気音"
   },
   {
     "bopomofo": "ㄔ",
-    "pinin": "ch",
+    "pinyin": "ch",
     "articulationType": "子音",
     "pointOfArticulation": "そり舌音",
     "aspirationType": "有気音"
   },
   {
     "bopomofo": "ㄕ",
-    "pinin": "sh",
+    "pinyin": "sh",
     "articulationType": "子音",
     "pointOfArticulation": "そり舌音"
   },
   {
     "bopomofo": "ㄖ",
-    "pinin": "r",
+    "pinyin": "r",
     "articulationType": "子音",
     "pointOfArticulation": "そり舌音"
   },
 
   {
     "bopomofo": "ㄗ",
-    "pinin": "z",
+    "pinyin": "z",
     "articulationType": "子音",
     "pointOfArticulation": "舌歯音",
     "aspirationType": "無気音"
   },
   {
     "bopomofo": "ㄘ",
-    "pinin": "c",
+    "pinyin": "c",
     "articulationType": "子音",
     "pointOfArticulation": "舌歯音",
     "aspirationType": "有気音"
   },
   {
     "bopomofo": "ㄙ",
-    "pinin": "s",
+    "pinyin": "s",
     "articulationType": "子音",
     "pointOfArticulation": "舌歯音"
   },
 
   {
     "bopomofo": "ㄚ",
-    "pinin": "a",
+    "pinyin": "a",
     "articulationType": "母音"
   },
   {
     "bopomofo": "ㄛ",
-    "pinin": "o",
+    "pinyin": "o",
     "articulationType": "母音"
   },
   {
     "bopomofo": "ㄜ",
-    "pinin": "e",
+    "pinyin": "e",
     "articulationType": "母音"
   },
   {
     "bopomofo": "ㄝ",
-    "pinin": "ê",
+    "pinyin": "ê",
     "articulationType": "母音"
   },
   {
     "bopomofo": "ㄞ",
-    "pinin": "ai",
+    "pinyin": "ai",
     "articulationType": "母音"
   },
   {
     "bopomofo": "ㄟ",
-    "pinin": "ei",
+    "pinyin": "ei",
     "articulationType": "母音"
   },
   {
     "bopomofo": "ㄠ",
-    "pinin": "ao",
+    "pinyin": "ao",
     "articulationType": "母音"
   },
 
   {
     "bopomofo": "ㄡ",
-    "pinin": "ou",
+    "pinyin": "ou",
     "articulationType": "母音"
   },
 
   {
     "bopomofo": "ㄢ",
-    "pinin": "an",
+    "pinyin": "an",
     "articulationType": "母音"
   },
   {
     "bopomofo": "ㄣ",
-    "pinin": "en",
+    "pinyin": "en",
     "articulationType": "母音"
   },
   {
     "bopomofo": "ㄤ",
-    "pinin": "ang",
+    "pinyin": "ang",
     "articulationType": "母音"
   },
   {
     "bopomofo": "ㄥ",
-    "pinin": "eng",
+    "pinyin": "eng",
     "articulationType": "母音"
   },
 
   {
     "bopomofo": "ㄦ",
-    "pinin": "er",
+    "pinyin": "er",
     "articulationType": "母音"
   },
   {
     "bopomofo": "ㄧ",
-    "pinin": "i/y",
+    "pinyin": "i/y",
     "articulationType": "母音"
   },
 
   {
     "bopomofo": "ㄨ",
-    "pinin": "u/w",
+    "pinyin": "u/w",
     "articulationType": "母音"
   },
 
   {
     "bopomofo": "ㄩ",
-    "pinin": "ü/yu",
+    "pinyin": "ü/yu",
     "articulationType": "母音"
   },
   {
     "bopomofo": "ㄧㄡ",
-    "pinin": "you, -iu",
+    "pinyin": "you, -iu",
     "articulationType": "母音",
     "explanation": "(i + ou)"
   },
   {
     "bopomofo": "ㄨㄟ",
-    "pinin": "wei, -ui",
+    "pinyin": "wei, -ui",
     "articulationType": "母音",
     "explanation": "(u + ei)"
   },
   {
     "bopomofo": "ㄧㄝ",
-    "pinin": "ye, -ie",
+    "pinyin": "ye, -ie",
     "articulationType": "母音",
     "explanation": "(i + ê)"
   },
   {
     "bopomofo": "ㄩㄝ",
-    "pinin": "yue, -üe",
+    "pinyin": "yue, -üe",
     "articulationType": "母音",
     "explanation": "(ü + ê)"
   },
 
   {
     "bopomofo": "ㄧㄣ",
-    "pinin": "yin, -in",
+    "pinyin": "yin, -in",
     "articulationType": "母音",
     "explanation": "(i + en)"
   },
 
   {
     "bopomofo": "ㄨㄣ",
-    "pinin": "wen, -un",
+    "pinyin": "wen, -un",
     "articulationType": "母音",
     "explanation": "(u + en)"
   },
 
   {
     "bopomofo": "ㄩㄣ",
-    "pinin": "yun, -ün",
+    "pinyin": "yun, -ün",
     "articulationType": "母音",
     "explanation": "(ü + en)"
   },
 
   {
     "bopomofo": "ㄧㄥ",
-    "pinin": "ying, -ing",
+    "pinyin": "ying, -ing",
     "articulationType": "母音",
     "explanation": "(i + eng)"
   },
 
   {
     "bopomofo": "ㄨㄥ",
-    "pinin": "weng, -ong",
+    "pinyin": "weng, -ong",
     "articulationType": "母音",
     "explanation": "(u + eng)"
   },
 
   {
     "bopomofo": "ㄩㄥ",
-    "pinin": "yong, -iong",
+    "pinyin": "yong, -iong",
     "articulationType": "母音",
     "explanation": "(ü + eng)"
   }

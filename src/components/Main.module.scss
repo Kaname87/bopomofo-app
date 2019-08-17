@@ -1,3 +1,28 @@
+$wrong-color: #f25757;
+$correct-color: #36f5d5;
+$font-main-color: #494949;
+$selectd-color: #d4f0fd;
+@mixin answer {
+  list-style-type: none;
+  border-radius: 20px;
+  border: solid;
+  border-width: 2px;
+  font-size: 3em;
+
+  text-align: center;
+  width: 250px;
+}
+
+@mixin correctColor {
+  // background: #36f5d5;
+  background: $correct-color;
+}
+
+@mixin wrongColor {
+  background: $wrong-color;
+  // background: #f25757;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -83,35 +108,21 @@ body {
   align-items: center;
 }
 
-.resultList {
-  list-style-type: none;
-}
-
-@mixin answer {
-  list-style-type: none;
-  border-radius: 20px;
-  border: solid;
-  border-width: 2px;
-  font-size: 3em;
-
-  text-align: center;
-  width: 250px;
-}
-
 .singleAnswer {
   @include answer;
 }
+.correctAnswer {
+  @include answer;
+  background: $correct-color;
+}
 .wrongAnswer {
   @include answer;
-  background: #f25757;
+  background: $wrong-color;
 }
 .selectedAnswer {
   @include answer;
-  background: #f2e863;
-}
-.correctAnswer {
-  @include answer;
-  background: #36f5d5;
+  // background: #444221;
+  background: $selectd-color;
 }
 
 .answerContainer {
@@ -120,44 +131,74 @@ body {
   flex-direction: column;
 }
 
-// .maisubmitAnswerButtonn {
-//   //   border: solid;
-//   flex: 1;
-//   font-size: 12em;
-//   color: #494949;
-//   //   border: solid;
-//   align-items: center;
-// }
-
 .answerUl {
   padding: 0;
 }
 
-.optionList {
-  flex: 1;
-  display: flex;
-  flex-direction: row wrap;
-  //   //   justify-content: space-evenly;
-  justify-content: center;
-  //   border-top: solid 1px;
-  text-align: center;
-  justify-content: center;
-  vertical-align: middle;
-  align-items: center;
-  //   flex-flow: column;
-}
-.option {
-  font-size: 2em;
-  margin: 10px;
-  border-radius: 30px;
+.resultList {
+  list-style-type: none;
+  // border-radius: 20px;
   border: solid;
-  border-width: 2px;
-  //   width: 100px;
-  //   flex-grow: 2;
+  // border-width: 2px;
+  font-size: 1em;
 
-  vertical-align: middle;
-  padding: 5%;
-  //   height: 80px;
+  text-align: left;
+  width: 250px;
+}
 
-  //   flex-direction: row wrap;
+.title {
+  width: 250px;
+  font-size: 5em;
+  // height: 200px;
+  padding: 1px;
+  color: #494949;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+table tr {
+  color: $font-main-color;
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
+}
+
+table tr:hover {
+  background-color: $selectd-color;
+}
+// table th {
+//   background-color:;
+// }
+
+table th,
+table td {
+  text-align: center;
+  // width: 25%;
+  padding: 15px 0;
+}
+
+.resultC {
+  width: 70px;
+}
+
+@mixin resultMark {
+  font-size: 2em;
+}
+.resultMarkCorrect {
+  @include resultMark;
+  color: $correct-color;
+}
+.resultMarkWrong {
+  @include resultMark;
+  color: $wrong-color;
+}
+
+.resultBopomofo {
+  font-size: 30px;
+  min-width: 70px;
+  margin-right: 2px;
 }

@@ -10,6 +10,8 @@ const StartPage = () => {
   const { setGameStatus } = useContext(QuizContext);
   return (
     <div className={styles.quizContainer}>
+      <div className={styles.title}>注音Quiz</div>
+
       <button
         className={styles.button}
         onClick={() =>

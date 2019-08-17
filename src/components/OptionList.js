@@ -8,35 +8,35 @@ const OptionList = ({
   setSelectedOption,
   showAnswer
 }) => {
-  const isAnswer = pinin => pinin === question.pinin;
-  const isSelected = pinin => pinin === selectedOption;
+  const isAnswer = pinyin => pinyin === question.pinyin;
+  const isSelected = pinyin => pinyin === selectedOption;
 
   const renderAnswerList = bopomofoList => {
     return (
       bopomofoList &&
       bopomofoList
-        .sort((a, b) => (a.pinin > b.pinin ? 1 : -1))
+        .sort((a, b) => (a.pinyin > b.pinyin ? 1 : -1))
         .map(v => renderAnswer(v))
     );
   };
 
-  const renderAnswer = ({ bopomofo, pinin }) => {
-    // console.log(bopomofo, pinin);
+  const renderAnswer = ({ bopomofo, pinyin }) => {
+    // console.log(bopomofo, pinyin);
     return (
       <li
         key={bopomofo}
         className={
-          showAnswer && isAnswer(pinin)
+          showAnswer && isAnswer(pinyin)
             ? styles.correctAnswer
-            : showAnswer && !isAnswer(pinin) && isSelected(pinin)
+            : showAnswer && !isAnswer(pinyin) && isSelected(pinyin)
             ? styles.wrongAnswer
-            : isSelected(pinin)
+            : isSelected(pinyin)
             ? styles.selectedAnswer
             : styles.singleAnswer
         }
-        onClick={() => !showAnswer && setSelectedOption(pinin)}
+        onClick={() => !showAnswer && setSelectedOption(pinyin)}
       >
-        {pinin}
+        {pinyin}
       </li>
     );
   };

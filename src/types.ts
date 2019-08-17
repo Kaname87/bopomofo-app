@@ -1,9 +1,11 @@
 export type QuestionType = {
   bopomofo?: string;
-  pinin?: string;
+  pinyin?: string;
 };
 export type HistoryType = {
   question?: QuestionType;
+  selectedOption?: string;
+  isCorrect?: boolean;
 };
 export type GameStatusType = "START" | "ONGOING" | "END";
 // export type GameStatusType = string;
