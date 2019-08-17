@@ -1,0 +1,5 @@
+export const GAME_STATUS_START = "GAME_STATUS_START";
+export const GAME_STATUS_ONGOING = "GAME_STATUS_ONGOING";
+export const GAME_STATUS_END = "GAME_STATUS_END";
+
+export const END_QUIZ_COUNT = 3;

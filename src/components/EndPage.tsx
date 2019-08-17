@@ -3,14 +3,13 @@ import styles from "./Main.module.scss";
 import QuizContext from "../context/quizContext";
 import XiaoLongBao from "./SVG/xiaolongbao";
 import { HistoryType } from "../types";
-const START = "START";
+import { GAME_STATUS_START } from "../constants";
 
 const EndPage = () => {
   const { setQuizCount, setGameStatus, histories, setHistories } = useContext(
     QuizContext
   );
 
-  // const END = "END";
   const reStart = () => {
     if (typeof setQuizCount == "function") {
       setQuizCount(0);
@@ -19,7 +18,7 @@ const EndPage = () => {
       setHistories([]);
     }
     if (typeof setGameStatus == "function") {
-      setGameStatus(START);
+      setGameStatus(GAME_STATUS_START);
     }
   };
 

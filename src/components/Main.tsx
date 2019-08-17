@@ -5,14 +5,13 @@ import StartPage from "./StartPage";
 import OnGoingPage from "./OnGoingPage";
 import EndPage from "./EndPage";
 import QuizContext from "../context/quizContext";
-
 import { HistoryType, GameStatusType, QuizContextType } from "../types";
-
-const START = "START";
-const ONGOING = "ONGOING";
+import { GAME_STATUS_START, GAME_STATUS_ONGOING } from "../constants";
 
 const Main = () => {
-  const [gameStatus, setGameStatus] = useState<GameStatusType>(START);
+  const [gameStatus, setGameStatus] = useState<GameStatusType>(
+    GAME_STATUS_START
+  );
 
   const [quizCount, setQuizCount] = useState<number>(0);
 
@@ -28,9 +27,9 @@ const Main = () => {
   };
 
   const mainPage =
-    gameStatus === START ? (
+    gameStatus === GAME_STATUS_START ? (
       <StartPage />
-    ) : gameStatus === ONGOING ? (
+    ) : gameStatus === GAME_STATUS_ONGOING ? (
       <OnGoingPage />
     ) : (
       <EndPage />

@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
 import styles from "./Main.module.scss";
 import QuizContext from "../context/quizContext";
-
-const ONGOING = "ONGOING";
+import { GAME_STATUS_ONGOING } from "../constants";
 
 const StartPage = () => {
   const { setGameStatus } = useContext(QuizContext);
@@ -13,7 +12,8 @@ const StartPage = () => {
         <button
           className={styles.startButton}
           onClick={() =>
-            typeof setGameStatus === "function" && setGameStatus(ONGOING)
+            typeof setGameStatus === "function" &&
+            setGameStatus(GAME_STATUS_ONGOING)
           }
         >
           Start

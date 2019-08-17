@@ -1,8 +1,13 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import styles from "./Main.module.scss";
 import OptionList from "./OptionList";
 import QuizContext from "../context/quizContext";
-import { QuizContextType } from "../types";
+import {
+  QuizContextType,
+  HistoryType,
+  SetHistoriesType,
+  SetQuizType
+} from "../types";
 
 interface questionInfo {
   bopomofoList: any;
@@ -16,8 +21,14 @@ const AnswerFields: React.FC<questionInfo> = ({ bopomofoList, question }) => {
     QuizContextType
   >(QuizContext);
 
-  useEffect(() => {
-    if (selectedOption.length > 0 && setHistories && histories) {
+  const submitAnswer = (
+    quizCount: number,
+    selectedOption: string,
+    histories: HistoryType[],
+    setHistories: SetHistoriesType,
+    setQuizCount: SetQuizType
+  ) => {
+    if (selectedOption.length > 0 && histories && setHistories) {
       setSelectedOption("");
       setShowAnswer(false);
       const isCorrect = question.pinyin === selectedOption;
@@ -26,8 +37,9 @@ const AnswerFields: React.FC<questionInfo> = ({ bopomofoList, question }) => {
         ...histories
       ];
       setHistories(newHistories);
+      setQuizCount(quizCount + 1);
     }
-  }, [quizCount]);
+  };
 
   return (
     <div className={styles.quizContainer}>
@@ -44,9 +56,17 @@ const AnswerFields: React.FC<questionInfo> = ({ bopomofoList, question }) => {
             onClick={() => {
               if (
                 typeof quizCount === "number" &&
-                typeof setQuizCount == "function"
+                typeof setQuizCount === "function" &&
+                typeof histories !== "undefined" &&
+                typeof setHistories === "function"
               ) {
-                setQuizCount(quizCount + 1);
+                submitAnswer(
+                  quizCount,
+                  selectedOption,
+                  histories,
+                  setHistories,
+                  setQuizCount
+                );
               }
             }}
             className={styles.button}
