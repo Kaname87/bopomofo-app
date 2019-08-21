@@ -4,9 +4,12 @@ import styles from "./Main.module.scss";
 import StartPage from "./StartPage";
 import OnGoingPage from "./OnGoingPage";
 import EndPage from "./EndPage";
+
 import QuizContext from "../context/quizContext";
 import { HistoryType, GameStatusType, QuizContextType } from "../types";
 import { GAME_STATUS_START, GAME_STATUS_ONGOING } from "../constants";
+
+import AttackGame from "./AttackGame";
 
 const Main = () => {
   const [gameStatus, setGameStatus] = useState<GameStatusType>(
@@ -34,11 +37,13 @@ const Main = () => {
     ) : (
       <EndPage />
     );
-  return (
-    <QuizContext.Provider value={quizContext}>
-      <div className={styles.wrapper}>{mainPage}</div>
-    </QuizContext.Provider>
-  );
+  return <AttackGame />;
+
+  // (
+  //   <QuizContext.Provider value={quizContext}>
+  //     <div className={styles.wrapper}>{mainPage}</div>
+  //   </QuizContext.Provider>
+  // );
 };
 
 export default Main;

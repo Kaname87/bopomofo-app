@@ -1,7 +1,7 @@
 import React, { useContext, Fragment } from "react";
 import styles from "./Main.module.scss";
 import QuizContext from "../context/quizContext";
-import XiaoLongBao from "./SVG/xiaolongbao";
+import XiaoLongBao from "./SVG/XiaoLongBao";
 import { HistoryType } from "../types";
 import { GAME_STATUS_START } from "../constants";
 

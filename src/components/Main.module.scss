@@ -249,50 +249,110 @@ table td {
   margin-right: 2px;
 }
 
-// .startButton {
-//   margin-top: 10px;
-//   width: 120px;
-//   height: 80px;
-//   background-color: #dddddd;
-//   // color: #dddddd;
-//   cursor: pointer;
-//   // height: 80px;
-//   // width: 100px;
-//   // border: none;
-//   // background: #f4e1d2;
-//   // background: none;
-//   display: flex;
-//   font-size: 20px;
-//   // // justify-content: center;
-//   // border-radius: 30px;
-//   outline: none;
-//   align-items: center;
-//   // transform: translate(-50%, -50%);
-//   justify-content: space-evenly;
-//   cursor: pointer;
-//   // &:focus {
-//   //   outline: 2px dashed #17171d;
-//   // }
-//   &:hover {
-//     svg {
-//       transform: scale(1.3);
-//     }
-//   }
-//   &::-moz-focus-inner {
-//     border: 0;
-//   }
-//   svg {
-//     outline: none;
-//     // transform: scale(1.1);
-//     transition: transform 0.3s linear;
-//   }
-// }
-
-// .buttonLabel {
-//   // height: 1px;
-//   // overflow: hidden;
-//   // position: absolute;
-//   // width: 1px;
-// }
-
 // https://tympanus.net/Tutorials/CircularProgressButton/
+
+.frm {
+  position: relative;
+  float: left;
+}
+.keyboard {
+  margin: 0;
+  padding: 0;
+}
+.sups {
+  color: #f875a0;
+  font: normal 11px tahoma;
+  text-shadow: 0 -1px 1px #eee;
+  top: 8px;
+  left: 10px;
+  position: absolute;
+}
+.kb {
+  // phone-keyboard .silver {
+  color: #3a3d42;
+  text-shadow: 0 1px 1px white;
+  background: #ecedef;
+  background-image: -moz-linear-gradient(#f8f8f9, #dddfe1);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#f8f8f9),
+    to(#dddfe1)
+  );
+  // }
+
+  // #iphone-keyboard .key {
+  width: 50px;
+  font: normal 25px Helvetica, Arial, Verdana;
+  // }
+  // #iphone-keyboard .button {
+  float: left;
+  display: block;
+  margin: 5px;
+  font: normal 13px Verdana, Tahoma, Arial, Verdana, Helvetica;
+  text-decoration: none;
+  text-align: center;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  height: 48px;
+}
+
+.kbWrapper {
+  display: flex;
+  // top: 100px;
+  position: relative;
+  top: 200px;
+}
+
+.kbColumn {
+  display: flex;
+  flex-flow: column;
+  // flex-flow: row;
+}
+.kbRow {
+  display: flex;
+  flex-flow: row;
+  // flex-flow: row;
+}
+
+.target {
+  font-size: 80px;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+}
+
+.kbButton {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 50px;
+  height: 30px;
+  border: 2px solid #494949;
+  border-radius: 40px;
+  background: transparent;
+  color: #494949;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s,
+    border-width 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s,
+    border-color 0.3s;
+
+  // &:disabled,
+  // &[disabled] {
+  //   border: 1px solid #fdfdfd;
+  //   background-color: #cccccc;
+  //   color: #494949;
+  // }
+}
