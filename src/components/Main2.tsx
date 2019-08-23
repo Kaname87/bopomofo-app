@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Main.module.scss";
+// import styles from "./Main.module.scss";
 
 import StartPage from "./StartPage";
 import OnGoingPage from "./OnGoingPage";
@@ -12,7 +12,7 @@ import { GAME_STATUS_START, GAME_STATUS_ONGOING } from "../constants";
 // import AttackGame from "./AttackGame";
 import FindGame from "./FindGame";
 
-const Main = () => {
+const Main2 = () => {
   const [gameStatus, setGameStatus] = useState<GameStatusType>(
     GAME_STATUS_START
   );
@@ -21,23 +21,6 @@ const Main = () => {
 
   const [histories, setHistories] = useState<HistoryType[]>([]);
 
-  const quizContext: QuizContextType = {
-    quizCount,
-    setQuizCount,
-    histories,
-    setHistories,
-    gameStatus,
-    setGameStatus
-  };
-
-  const mainPage =
-    gameStatus === GAME_STATUS_START ? (
-      <StartPage />
-    ) : gameStatus === GAME_STATUS_ONGOING ? (
-      <OnGoingPage />
-    ) : (
-      <EndPage />
-    );
   return <FindGame />;
 
   // (
@@ -47,4 +30,4 @@ const Main = () => {
   // );
 };
 
-export default Main;
+export default Main2;
