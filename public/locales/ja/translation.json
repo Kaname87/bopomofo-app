@@ -14,7 +14,7 @@
     "back": "戻る"
   },
   "message": {
-    "challenge-failed": "残念...",
+    "challenge-failed": "失敗...",
     "challenge-completed": "お見事！"
   }
 }
