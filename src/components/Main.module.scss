@@ -81,7 +81,7 @@ body {
   justify-content: center;
   text-align: center;
   margin: 0;
-  padding: 5px;
+  // padding: 5px;
 }
 
 .quizContainer {
@@ -197,12 +197,22 @@ body {
   width: 250px;
 }
 
+.titleWrapper {
+  padding-top: 90px;
+}
 .title {
-  width: 250px;
-  font-size: 5em;
+  width: 300px;
+  font-size: 70px;
+  // height: 200px;
+  padding: 10px;
+  color: #494949;
+}
+.subTitle {
+  width: 300px;
+  font-size: 16px;
   // height: 200px;
   padding: 1px;
-  color: #494949;
+  // color: #494949;
 }
 
 table {
@@ -357,7 +367,11 @@ table td {
   // }
 }
 
-.boardCell {
+.buttonWrapper {
+  padding-top: 10px;
+}
+
+@mixin cell {
   display: flex;
   width: 50px;
   height: 50px;
@@ -367,6 +381,19 @@ table td {
   text-align: center;
   align-items: center;
   font-size: 16px;
+}
+.boardCell {
+  @include cell;
+}
+.wrongBoardCell {
+  @include cell;
+  background: $wrong-color;
+  // color: $wrong-color;
+}
+.correctBoardCell {
+  @include cell;
+  background: $correct-color;
+  // color: $correct-color;
 }
 
 .gameContainer {
@@ -398,4 +425,12 @@ table td {
   flex-direction: column;
   /* margin: 0 10px; */
   align-items: center;
+}
+
+.message {
+  height: 20px;
+  // display: / flex;
+  // align-items: center;
+  margin-top: 3px;
+  font-weight: bold;
 }

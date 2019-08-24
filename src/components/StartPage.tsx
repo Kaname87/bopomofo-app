@@ -8,7 +8,7 @@ const StartPage = () => {
   return (
     <div className={styles.quizContainer}>
       <div className={styles.title}>注音Quiz</div>
-      <div className={styles.buttonContainer}>
+      <div className={styles.buttonWrapper}>
         <button
           className={styles.startButton}
           onClick={() =>

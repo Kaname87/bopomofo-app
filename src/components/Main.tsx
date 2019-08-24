@@ -10,7 +10,7 @@ import { HistoryType, GameStatusType, QuizContextType } from "../types";
 import { GAME_STATUS_START, GAME_STATUS_ONGOING } from "../constants";
 
 // import AttackGame from "./AttackGame";
-import FindGame from "./FindGame";
+// import FindGame from "./FindGame";
 
 const Main = () => {
   const [gameStatus, setGameStatus] = useState<GameStatusType>(
@@ -38,13 +38,11 @@ const Main = () => {
     ) : (
       <EndPage />
     );
-  return <FindGame />;
-
-  // (
-  //   <QuizContext.Provider value={quizContext}>
-  //     <div className={styles.wrapper}>{mainPage}</div>
-  //   </QuizContext.Provider>
-  // );
+  return (
+    <QuizContext.Provider value={quizContext}>
+      <div className={styles.wrapper}>{mainPage}</div>
+    </QuizContext.Provider>
+  );
 };
 
 export default Main;
