@@ -1,0 +1,20 @@
+{
+  "title": {
+    "part1": "Find",
+    "part2": "Zhuyin"
+  },
+  "subtitle": {
+    "part1": "Find Zhuyin",
+    "part2": "（ㄜ、ㄘ、ㄝ）",
+    "part3": "among Hiragana"
+  },
+  "button": {
+    "start": "Start",
+    "next": "Next",
+    "back": "Back"
+  },
+  "message": {
+    "challenge-failed": "Failed...",
+    "challenge-completed": "Amazing!"
+  }
+}

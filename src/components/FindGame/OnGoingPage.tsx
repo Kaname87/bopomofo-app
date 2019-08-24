@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
 import styles from "../Main2.module.scss";
-
+import { useTranslation } from "react-i18next";
 import Board from "./Board";
 import Header from "./Header";
+import LanguageSelector from "./LanguageSelector";
 import FindGameContext from "../../context/FindGameContext";
 
 import { GAME_STATUS_START } from "../../constants";
@@ -73,13 +74,18 @@ const OnGoingPage = () => {
       isAnswer: false
     });
   };
+  const { t } = useTranslation();
   const targetIsReady = !!target.val;
   const isGameOvered = selectedCell.selected && !selectedCell.isAnswer;
 
   const isGameEnded =
     isGameOvered || (selectedCell.selected && quizCount === 2);
 
-  const message = !isGameEnded ? "" : isGameOvered ? "残念！" : "お見事！";
+  const message = !isGameEnded
+    ? ""
+    : isGameOvered
+    ? t("message.challenge-failed")
+    : t("message.challenge-completed");
 
   return targetIsReady ? (
     <div className={styles.gameInnerWrapper}>
@@ -93,7 +99,7 @@ const OnGoingPage = () => {
       <div className={styles.buttonWrapper}>
         {isGameEnded ? (
           <button className={styles.button} onClick={() => reStart()}>
-            戻る
+            {t("button.back")}
           </button>
         ) : (
           <button
@@ -101,9 +107,10 @@ const OnGoingPage = () => {
             disabled={!selectedCell.selected}
             onClick={showNext}
           >
-            次へ
+            {t("button.next")}
           </button>
         )}
+        <LanguageSelector />
       </div>
     </div>
   ) : (

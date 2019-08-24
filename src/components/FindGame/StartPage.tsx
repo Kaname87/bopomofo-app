@@ -2,25 +2,29 @@ import React, { useContext } from "react";
 import styles from "../Main2.module.scss";
 
 import FindGameContext from "../../context/FindGameContext";
+import { useTranslation } from "react-i18next";
 import { GAME_STATUS_ONGOING } from "../../constants";
+import LanguageSelector from "./LanguageSelector";
 
 const StartPage = () => {
   const { setGameStatus } = useContext(FindGameContext);
+  const { t, i18n } = useTranslation();
+
   return (
     <div className={styles.gameInnerWrapper}>
       <div className={styles.gameMainArea}>
         <div className={styles.titleWrapper}>
           <div className={styles.title}>
-            注音
+            {t("title.part1")}
             <br />
-            探し
+            {t("title.part2")}
           </div>
           <div className={styles.subTitle}>
-            ひらがなの中から
+            {t("subtitle.part1")}
             <br />
-            注音符号（ㄜ、ㄘ、ㄝ）
+            {t("subtitle.part2")}
             <br />
-            を見つけてください
+            {t("subtitle.part3")}
           </div>
         </div>
       </div>
@@ -32,8 +36,9 @@ const StartPage = () => {
             setGameStatus(GAME_STATUS_ONGOING)
           }
         >
-          Start
+          {t("button.start")}
         </button>
+        <LanguageSelector />
       </div>
     </div>
   );

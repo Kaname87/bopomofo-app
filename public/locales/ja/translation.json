@@ -1,0 +1,20 @@
+{
+  "title": {
+    "part1": "注音",
+    "part2": "探し"
+  },
+  "subtitle": {
+    "part1": "ひらがなの中から",
+    "part2": "注音符号（ㄜ、ㄘ、ㄝ）",
+    "part3": "を見つけてください"
+  },
+  "button": {
+    "start": "スタート",
+    "next": "次へ",
+    "back": "戻る"
+  },
+  "message": {
+    "challenge-failed": "残念...",
+    "challenge-completed": "お見事！"
+  }
+}

@@ -354,7 +354,7 @@ table td {
 
 .gameHeader {
   margin: 10px 0;
-  padding-top: 10px;
+  padding-top: 15px;
   display: flex;
   justify-content: space-around;
   width: 300px;
@@ -383,4 +383,31 @@ table td {
   // align-items: center;
   margin-top: 3px;
   font-weight: bold;
+}
+.languageSelectorWrapper {
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  margin-top: 10px;
+}
+.languageSelector {
+  font-family: "Montserrat", sans-serif;
+  // height: 0px;
+  // justify-content: center;
+
+  // display: block;
+  // margin: 0 auto;
+  // padding: 0;
+  // width: 200px;
+  // height: 5px;
+  // border: 1px solid #1ecd97;
+  border-radius: 40px;
+  background: transparent;
+  // color: #1ecd97;
+  letter-spacing: 1px;
+  // font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s,
+    border-color 0.3s;
 }

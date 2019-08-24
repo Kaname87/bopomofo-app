@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import styles from "./Main2.module.scss";
 
 import StartPage from "./FindGame/StartPage";
@@ -35,7 +35,9 @@ const Main2 = () => {
 
   return (
     <FindGameContext.Provider value={findGameContext}>
-      <div className={styles.gameWrapper}>{mainPage}</div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <div className={styles.gameWrapper}>{mainPage}</div>
+      </Suspense>
     </FindGameContext.Provider>
   );
 };
