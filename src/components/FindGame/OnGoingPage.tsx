@@ -3,14 +3,9 @@ import styles from "../Main2.module.scss";
 
 import Board from "./Board";
 import Header from "./Header";
-
 import FindGameContext from "../../context/FindGameContext";
-// import FindGame from "../FindGame";
-import {
-  GAME_STATUS_START,
-  GAME_STATUS_END,
-  END_QUIZ_COUNT
-} from "../../constants";
+
+import { GAME_STATUS_START } from "../../constants";
 
 import { targetType } from "../../types";
 
@@ -54,11 +49,6 @@ const OnGoingPage = () => {
   }, []);
 
   useEffect(() => {
-    if (quizCount === END_QUIZ_COUNT && typeof setGameStatus === "function") {
-      return setGameStatus(GAME_STATUS_END);
-    }
-    console.log(targetList);
-    console.log(quizCount);
     if (targetList.length > 0 && typeof quizCount == "number") {
       setTarget(targetList[quizCount]);
     }

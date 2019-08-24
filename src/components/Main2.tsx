@@ -3,11 +3,10 @@ import styles from "./Main.module.scss";
 
 import StartPage from "./FindGame/StartPage";
 import OnGoingPage from "./FindGame/OnGoingPage";
-import EndPage from "./FindGame/EndPage";
 
 import FindGameContext from "../context/FindGameContext";
 import { GameStatusType } from "../types";
-import { GAME_STATUS_START, GAME_STATUS_ONGOING } from "../constants";
+import { GAME_STATUS_START } from "../constants";
 
 const Main2 = () => {
   const [gameStatus, setGameStatus] = useState<GameStatusType>(
@@ -34,13 +33,7 @@ const Main2 = () => {
   };
 
   const mainPage =
-    gameStatus === GAME_STATUS_START ? (
-      <StartPage />
-    ) : gameStatus === GAME_STATUS_ONGOING ? (
-      <OnGoingPage />
-    ) : (
-      <EndPage />
-    );
+    gameStatus === GAME_STATUS_START ? <StartPage /> : <OnGoingPage />;
 
   return (
     <FindGameContext.Provider value={findGameContext}>
