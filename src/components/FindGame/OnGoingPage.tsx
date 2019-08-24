@@ -81,8 +81,19 @@ const OnGoingPage = () => {
   const isGameEnded =
     isGameOvered || (selectedCell.selected && quizCount === 2);
 
+  const renderProgress = () => {
+    const isDone = (count: number) => count < quizCount;
+
+    const progress = ["ㄜ", "ㄘ", "ㄝ"].map((v, k) => (
+      <div key={v} className={isDone(k) ? styles.pgDone : styles.pgNotYet}>
+        {v}
+      </div>
+    ));
+    return <div className={styles.progressBar}>{progress}</div>;
+  };
+
   const message = !isGameEnded
-    ? ""
+    ? renderProgress()
     : isGameOvered
     ? t("message.challenge-failed")
     : t("message.challenge-completed");
@@ -91,8 +102,6 @@ const OnGoingPage = () => {
     <div className={styles.gameInnerWrapper}>
       <div className={styles.gameMainArea}>
         <Header isGameEnded={isGameEnded} />
-        {/* // "ㄜ" "ㄘ" "ㄝ" */}
-        {/* {console.log(target)} */}
         <Board target={target} />
         <div className={styles.message}>{message}</div>
       </div>

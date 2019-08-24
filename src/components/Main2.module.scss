@@ -358,7 +358,7 @@ table td {
   justify-content: center;
   margin-top: 10px;
 }
-.languageSelector {
+@mixin lang {
   font-family: "Montserrat", sans-serif;
 
   border: 0.5px solid;
@@ -372,4 +372,38 @@ table td {
   -webkit-tap-highlight-color: transparent;
   transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s,
     border-color 0.3s;
+  color: #606565;
+}
+.languageSelector {
+  @include lang;
+  // color: #d8e4e4;
+}
+.selectedLanguageSelector {
+  @include lang;
+  // background: #d8e4e4;
+  background: #c7c7c7;
+  // #c7c7c7
+  color: #fff;
+}
+.progressBar {
+  display: flex;
+  // justify-content: center;
+  justify-content: center;
+  // border: 1px solid #fdfdfd;
+  // border: 1px solid black;
+  // border-radius: 30px;
+}
+@mixin pg {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.pgDone {
+  @include pg;
+  color: #d8e4e4;
+  // color: #fdfdfd;
+}
+.pgNotYet {
+  @include pg;
+  // color: black;
 }
