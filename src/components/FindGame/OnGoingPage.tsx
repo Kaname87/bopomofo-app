@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
-import styles from "../Main.module.scss";
-import useInterval from "../../utils/useInterval";
+import styles from "../Main2.module.scss";
 
 import Board from "./Board";
+import Header from "./Header";
 
 import FindGameContext from "../../context/FindGameContext";
 // import FindGame from "../FindGame";
@@ -11,15 +11,12 @@ import {
   GAME_STATUS_END,
   END_QUIZ_COUNT
 } from "../../constants";
-type targetType = {
-  col: number;
-  row: number;
-  val: string;
-  otherVal: string;
-};
 
-const rand = (max: number): number => Math.floor(Math.random() * max);
+import { targetType } from "../../types";
+
 const maxLength = 5;
+const rand = (max: number): number => Math.floor(Math.random() * max);
+
 const createTargetList = (targetSourceList: targetType[]): targetType[] => {
   return targetSourceList.map(source => ({
     ...source,
@@ -28,42 +25,17 @@ const createTargetList = (targetSourceList: targetType[]): targetType[] => {
   }));
 };
 
-type targetStateType = {
-  title?: string;
-  bopomofo?: string;
-};
-
 const targetSourceList = [
   { col: 1, row: 1, val: "さ", otherVal: "ㄜ" },
   { col: 1, row: 1, val: "ち", otherVal: "ㄘ" },
   { col: 1, row: 1, val: "せ", otherVal: "ㄝ" }
 ];
 
-type headerType = {
-  isGameEnded: boolean;
-};
-const GameHeader = ({ isGameEnded }: headerType) => {
-  const [timer, setTimer] = useState(0);
-  useInterval(() => {
-    if (!isGameEnded) {
-      setTimer((prevTimer: number) => prevTimer + 1);
-    }
-  }, 1000);
-
-  return (
-    <div className={styles.gameHeader}>
-      <div className={styles.timer}>{timer}</div>
-    </div>
-  );
-};
-
 const OnGoingPage = () => {
   const {
     quizCount,
     setQuizCount,
     setGameStatus,
-    // selected,
-    // setSelected,
     selectedCell,
     setSelectedCell
   } = useContext(FindGameContext);
@@ -121,9 +93,9 @@ const OnGoingPage = () => {
 
   return targetIsReady ? (
     <div className={styles.gameContainer}>
-      <GameHeader isGameEnded={isGameEnded} />
+      <Header isGameEnded={isGameEnded} />
       {/* // "ㄜ" "ㄘ" "ㄝ" */}
-      {console.log(target)}
+      {/* {console.log(target)} */}
       <Board target={target} />
       <div className={styles.message}>{message}</div>
       <div className={styles.buttonWrapper}>

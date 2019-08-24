@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import styles from "../Main.module.scss";
-// ../../Main.module.scs
+import styles from "../Main2.module.scss";
+
 import FindGameContext from "../../context/FindGameContext";
 import { GAME_STATUS_ONGOING } from "../../constants";
 

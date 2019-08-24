@@ -1,0 +1,436 @@
+// $wrong-color: #f25757;
+$wrong-color: #fb797e;
+// $correct-color: #36f5d5;
+$correct-color: #1ecd97;
+$font-main-color: #494949;
+$selectd-color: #d4f0fd;
+@mixin answer {
+  list-style-type: none;
+  border-radius: 20px;
+  border: solid;
+  border-width: 2px;
+  font-size: 40px;
+  margin-bottom: 2px;
+
+  text-align: center;
+  width: 250px;
+}
+
+@mixin correctColor {
+  // background: #36f5d5;
+  background: $correct-color;
+}
+
+@mixin wrongColor {
+  background: $wrong-color;
+  // background: #f25757;
+}
+
+@mixin button {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 200px;
+  height: 60px;
+  border: 2px solid #1ecd97;
+  border-radius: 40px;
+  background: transparent;
+  color: #1ecd97;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s,
+    border-width 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s,
+    border-color 0.3s;
+
+  &:disabled,
+  &[disabled] {
+    border: 1px solid #fdfdfd;
+    background-color: #cccccc;
+    color: #494949;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  // color: #3c4859;
+
+  background: #f9f9f9;
+  color: #62706c;
+  font-size: 100%;
+  line-height: 1.25;
+  // padding: 25px 0;
+  // border-right: 25px solid #fff;
+  // border-left: 25px solid #fff;
+  font-family: "Lato", Arial, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  height: 100%;
+
+  max-width: 100%;
+  width: 100%;
+  min-width: 250px;
+  margin: 0 auto;
+  //   width: 300px;
+  //   flex-flow: row wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  // padding: 5px;
+}
+
+.quizContainer {
+  // padding: 5px;
+  width: 100%;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.buttonContainer {
+  margin-top: 10px;
+  // // padding: 5px;
+  // width: 100%;
+  // flex-wrap: nowrap;
+  // flex-direction: row;
+  // display: flex;
+  // justify-content: center;
+}
+.startButton {
+  @include button;
+}
+.button {
+  @include button;
+  // margin: 0 20px;
+  // width: 100px;
+  // height: 50px;
+  // // background: #494949;
+  // // background: #f2e863;
+  // // border-radius: 50%;
+  // // flex-wrap: nowrap;
+  // flex-direction: row;
+  // display: flex;
+  // justify-content: center;
+}
+
+// .submitAnswerButton {
+//   background: #f2e863;
+//   border-radius: 30%;
+//   width: 50px;
+//   // background: #EAF2E3
+// }
+
+.question {
+  font-size: 10em;
+  height: 200px;
+  padding: 1px;
+  color: #494949;
+  //   border: solid;
+  align-items: center;
+}
+
+.flexCol {
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+}
+
+.answersContainer {
+  // margin-top: 30px;
+  padding: 0;
+  margin-top: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  display: flex;
+  // width: calc(100% - 20px);
+  align-items: center;
+}
+
+.singleAnswer {
+  @include answer;
+}
+.correctAnswer {
+  @include answer;
+  //background : $correct-color;
+  color: $correct-color;
+}
+.wrongAnswer {
+  @include answer;
+  // background: $wrong-color;
+  color: $wrong-color;
+}
+.selectedAnswer {
+  @include answer;
+  // background: #444221;
+  //
+  color: #fff;
+  background: $correct-color;
+}
+
+.answerContainer {
+  padding: 0;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.answerUl {
+  margin: 0;
+  padding: 0;
+}
+
+.resultList {
+  list-style-type: none;
+  // border-radius: 20px;
+  border: solid;
+  // border-width: 2px;
+  font-size: 1em;
+  mask-size: cover;
+
+  text-align: left;
+  width: 250px;
+}
+
+.titleWrapper {
+  padding-top: 90px;
+}
+.title {
+  width: 300px;
+  font-size: 70px;
+  // height: 200px;
+  padding: 10px;
+  color: #494949;
+}
+.subTitle {
+  width: 300px;
+  font-size: 16px;
+  // height: 200px;
+  padding: 1px;
+  // color: #494949;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+table tr {
+  color: $font-main-color;
+  border-bottom: solid 1px #eee;
+}
+
+table th,
+table td {
+  text-align: center;
+  // width: 25%;
+  padding: 15px 0;
+}
+
+.resultWideCol {
+  width: 70px;
+}
+.resultNarrowCol {
+  width: 40px;
+}
+
+@mixin resultMark {
+  font-size: 2em;
+}
+.resultMarkCorrect {
+  @include resultMark;
+  color: $correct-color;
+}
+.resultMarkWrong {
+  @include resultMark;
+  color: $wrong-color;
+}
+
+.resultBopomofo {
+  font-size: 30px;
+  min-width: 70px;
+  margin-right: 2px;
+}
+
+// https://tympanus.net/Tutorials/CircularProgressButton/
+
+.frm {
+  position: relative;
+  float: left;
+}
+.keyboard {
+  margin: 0;
+  padding: 0;
+}
+.sups {
+  color: #f875a0;
+  font: normal 11px tahoma;
+  text-shadow: 0 -1px 1px #eee;
+  top: 8px;
+  left: 10px;
+  position: absolute;
+}
+.kb {
+  // phone-keyboard .silver {
+  color: #3a3d42;
+  text-shadow: 0 1px 1px white;
+  background: #ecedef;
+  background-image: -moz-linear-gradient(#f8f8f9, #dddfe1);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#f8f8f9),
+    to(#dddfe1)
+  );
+  // }
+
+  // #iphone-keyboard .key {
+  width: 50px;
+  font: normal 25px Helvetica, Arial, Verdana;
+  // }
+  // #iphone-keyboard .button {
+  float: left;
+  display: block;
+  margin: 5px;
+  font: normal 13px Verdana, Tahoma, Arial, Verdana, Helvetica;
+  text-decoration: none;
+  text-align: center;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  height: 48px;
+}
+
+.kbWrapper {
+  display: flex;
+  // top: 100px;
+  position: relative;
+  top: 200px;
+}
+
+.kbColumn {
+  display: flex;
+  flex-flow: column;
+  // flex-flow: row;
+}
+.kbRow {
+  display: flex;
+  flex-flow: row;
+  // flex-flow: row;
+}
+
+.target {
+  font-size: 80px;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+}
+
+.kbButton {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 50px;
+  height: 30px;
+  border: 2px solid #494949;
+  border-radius: 40px;
+  background: transparent;
+  color: #494949;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s,
+    border-width 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s,
+    border-color 0.3s;
+
+  // &:disabled,
+  // &[disabled] {
+  //   border: 1px solid #fdfdfd;
+  //   backglround-color: #cccccc;
+  //   color: #494949;
+  // }
+}
+
+.buttonWrapper {
+  padding-top: 10px;
+}
+
+@mixin cell {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #494949;
+  margin: 3px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 16px;
+}
+.boardCell {
+  @include cell;
+}
+.wrongBoardCell {
+  @include cell;
+  background: $wrong-color;
+  // color: $wrong-color;
+}
+.correctBoardCell {
+  @include cell;
+  background: $correct-color;
+  // color: $correct-color;
+}
+
+.gameContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.gameHeader {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+}
+.gameTitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+.timer {
+  font-size: 15px;
+  // font-weight: bold;
+  // display: flex;
+}
+
+.boardWrapper {
+  display: flex;
+  flex-direction: column;
+  /* margin: 0 10px; */
+  align-items: center;
+}
+
+.message {
+  height: 20px;
+  // display: / flex;
+  // align-items: center;
+  margin-top: 3px;
+  font-weight: bold;
+}

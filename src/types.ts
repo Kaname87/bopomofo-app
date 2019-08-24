@@ -32,3 +32,11 @@ export type QuizContextType = {
   gameStatus?: GameStatusType;
   setGameStatus?: (gameStatus: GameStatusType) => void;
 };
+
+// Find Game
+export type targetType = {
+  col: number;
+  row: number;
+  val: string;
+  otherVal: string;
+};
