@@ -82,12 +82,14 @@ const OnGoingPage = () => {
   const message = !isGameEnded ? "" : isGameOvered ? "残念！" : "お見事！";
 
   return targetIsReady ? (
-    <div className={styles.gameContainer}>
-      <Header isGameEnded={isGameEnded} />
-      {/* // "ㄜ" "ㄘ" "ㄝ" */}
-      {/* {console.log(target)} */}
-      <Board target={target} />
-      <div className={styles.message}>{message}</div>
+    <div className={styles.gameInnerWrapper}>
+      <div className={styles.gameMainArea}>
+        <Header isGameEnded={isGameEnded} />
+        {/* // "ㄜ" "ㄘ" "ㄝ" */}
+        {/* {console.log(target)} */}
+        <Board target={target} />
+        <div className={styles.message}>{message}</div>
+      </div>
       <div className={styles.buttonWrapper}>
         {isGameEnded ? (
           <button className={styles.button} onClick={() => reStart()}>

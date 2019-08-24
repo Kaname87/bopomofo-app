@@ -7,19 +7,21 @@ import { GAME_STATUS_ONGOING } from "../../constants";
 const StartPage = () => {
   const { setGameStatus } = useContext(FindGameContext);
   return (
-    <div className={styles.quizContainer}>
-      <div className={styles.titleWrapper}>
-        <div className={styles.title}>
-          注音
-          <br />
-          探し
-        </div>
-        <div className={styles.subTitle}>
-          ひらがなの中から
-          <br />
-          注音符号（ㄜ、ㄘ、ㄝ）
-          <br />
-          を見つけてください
+    <div className={styles.gameInnerWrapper}>
+      <div className={styles.gameMainArea}>
+        <div className={styles.titleWrapper}>
+          <div className={styles.title}>
+            注音
+            <br />
+            探し
+          </div>
+          <div className={styles.subTitle}>
+            ひらがなの中から
+            <br />
+            注音符号（ㄜ、ㄘ、ㄝ）
+            <br />
+            を見つけてください
+          </div>
         </div>
       </div>
       <div className={styles.buttonContainer}>

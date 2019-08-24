@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Main.module.scss";
+import styles from "./Main2.module.scss";
 
 import StartPage from "./FindGame/StartPage";
 import OnGoingPage from "./FindGame/OnGoingPage";
@@ -26,8 +26,6 @@ const Main2 = () => {
     setQuizCount,
     gameStatus,
     setGameStatus,
-    // selected,
-    // setSelected,
     selectedCell,
     setSelectedCell
   };
@@ -37,7 +35,7 @@ const Main2 = () => {
 
   return (
     <FindGameContext.Provider value={findGameContext}>
-      <div className={styles.wrapper}>{mainPage}</div>;
+      <div className={styles.gameWrapper}>{mainPage}</div>
     </FindGameContext.Provider>
   );
 };
