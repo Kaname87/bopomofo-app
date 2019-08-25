@@ -114,7 +114,8 @@ body {
   height: 380px;
 }
 .titleWrapper {
-  padding-top: 90px;
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 .title {
   width: 300px;
@@ -129,124 +130,6 @@ body {
   // height: 200px;
   padding: 1px;
   // color: #494949;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 250px;
-  margin-bottom: 10px;
-}
-
-table tr {
-  color: $font-main-color;
-  border-bottom: solid 1px #eee;
-}
-
-table th,
-table td {
-  text-align: center;
-  // width: 25%;
-  padding: 15px 0;
-}
-
-.resultWideCol {
-  width: 70px;
-}
-.resultNarrowCol {
-  width: 40px;
-}
-
-@mixin resultMark {
-  font-size: 2em;
-}
-.resultMarkCorrect {
-  @include resultMark;
-  color: $correct-color;
-}
-.resultMarkWrong {
-  @include resultMark;
-  color: $wrong-color;
-}
-
-.resultBopomofo {
-  font-size: 30px;
-  min-width: 70px;
-  margin-right: 2px;
-}
-
-// https://tympanus.net/Tutorials/CircularProgressButton/
-
-.frm {
-  position: relative;
-  float: left;
-}
-.keyboard {
-  margin: 0;
-  padding: 0;
-}
-.sups {
-  color: #f875a0;
-  font: normal 11px tahoma;
-  text-shadow: 0 -1px 1px #eee;
-  top: 8px;
-  left: 10px;
-  position: absolute;
-}
-.kb {
-  // phone-keyboard .silver {
-  color: #3a3d42;
-  text-shadow: 0 1px 1px white;
-  background: #ecedef;
-  background-image: -moz-linear-gradient(#f8f8f9, #dddfe1);
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#f8f8f9),
-    to(#dddfe1)
-  );
-  // }
-
-  // #iphone-keyboard .key {
-  width: 50px;
-  font: normal 25px Helvetica, Arial, Verdana;
-  // }
-  // #iphone-keyboard .button {
-  float: left;
-  display: block;
-  margin: 5px;
-  font: normal 13px Verdana, Tahoma, Arial, Verdana, Helvetica;
-  text-decoration: none;
-  text-align: center;
-  border: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  height: 48px;
-}
-
-.kbWrapper {
-  display: flex;
-  // top: 100px;
-  position: relative;
-  top: 200px;
-}
-
-.kbColumn {
-  display: flex;
-  flex-flow: column;
-  // flex-flow: row;
-}
-.kbRow {
-  display: flex;
-  flex-flow: row;
-  // flex-flow: row;
 }
 
 .target {
@@ -428,7 +311,7 @@ table td {
 }
 
 .progressBar2 {
-  height: 10px;
+  height: 5px;
   border-radius: 30px;
   // background-image: linear-gradient(
   //   to bottom,
