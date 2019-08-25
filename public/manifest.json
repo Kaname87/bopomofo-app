@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "注音探し",
+  "name": "注音探し",
   "icons": [
     {
       "src": "favicon.ico",
