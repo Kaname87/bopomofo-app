@@ -333,6 +333,7 @@ table td {
 }
 .timer {
   font-size: 15px;
+  margin-top: 5px;
   // font-weight: bold;
   // display: flex;
 }
@@ -345,7 +346,7 @@ table td {
 }
 
 .message {
-  padding-top: 10px;
+  // padding-top: 10px;
   height: 20px;
   // display: / flex;
   // align-items: center;
@@ -360,7 +361,7 @@ table td {
 }
 @mixin lang {
   font-family: "Montserrat", sans-serif;
-
+  font-size: 10px;
   border: 0.5px solid;
   margin-right: 1px;
   border-radius: 40px;
@@ -406,4 +407,54 @@ table td {
 .pgNotYet {
   @include pg;
   // color: black;
+}
+.headerInnerHeader {
+  width: 100%;
+}
+.progressContainer {
+  // margin: 100px auto;
+  // display: flex;
+  width: 100%;
+  // justify-content: center;
+  // text-align: center;
+}
+
+.progress2 {
+  padding: 1px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.25);
+  // box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+  //   0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progressBar2 {
+  height: 10px;
+  border-radius: 30px;
+  // background-image: linear-gradient(
+  //   to bottom,
+  //   rgba(255, 255, 255, 0.3),
+  //   rgba(255, 255, 255, 0.05)
+  // );
+  width: 85%;
+  // background-color: #ece07e;
+  background-color: #52e6b8;
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+// ..progress-bar2 {
+//   width: 85%;
+//   background-color: #ef476f;
+//   animation: progressAnimation 6s;
+// }
+
+@keyframes progressAnimation {
+  0% {
+    width: 5%;
+    background-color: #f9bcca;
+  }
+  100% {
+    width: 85%;
+    background-color: #ef476f;
+  }
 }

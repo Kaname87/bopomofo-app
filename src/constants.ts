@@ -8,3 +8,6 @@ export const COLOR_GREEN = "#1976D2";
 export const COLOR_BLUE = "#4CAF50";
 export const COLOR_RED = "#E64A19";
 export const COLOR_YELLOW = "#FFEB3B";
+
+export const FIND_GAME_END_IDX = 2;
+export const FIND_GAME_ROW_COL_NUM = 5;

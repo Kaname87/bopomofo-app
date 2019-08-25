@@ -6,18 +6,21 @@ import Header from "./Header";
 import LanguageSelector from "./LanguageSelector";
 import FindGameContext from "../../context/FindGameContext";
 
-import { GAME_STATUS_START } from "../../constants";
+import {
+  GAME_STATUS_START,
+  FIND_GAME_END_IDX,
+  FIND_GAME_ROW_COL_NUM
+} from "../../constants";
 
 import { targetType } from "../../types";
 
-const maxLength = 5;
 const rand = (max: number): number => Math.floor(Math.random() * max);
 
 const createTargetList = (targetSourceList: targetType[]): targetType[] => {
   return targetSourceList.map(source => ({
     ...source,
-    row: rand(maxLength),
-    col: rand(maxLength)
+    row: rand(FIND_GAME_ROW_COL_NUM),
+    col: rand(FIND_GAME_ROW_COL_NUM)
   }));
 };
 
@@ -79,7 +82,7 @@ const OnGoingPage = () => {
   const isGameOvered = selectedCell.selected && !selectedCell.isAnswer;
 
   const isGameEnded =
-    isGameOvered || (selectedCell.selected && quizCount === 2);
+    isGameOvered || (selectedCell.selected && quizCount === FIND_GAME_END_IDX);
 
   const renderProgress = () => {
     const isDone = (count: number) => count < quizCount;
@@ -93,7 +96,7 @@ const OnGoingPage = () => {
   };
 
   const message = !isGameEnded
-    ? renderProgress()
+    ? ""
     : isGameOvered
     ? t("message.challenge-failed")
     : t("message.challenge-completed");
@@ -101,7 +104,7 @@ const OnGoingPage = () => {
   return targetIsReady ? (
     <div className={styles.gameInnerWrapper}>
       <div className={styles.gameMainArea}>
-        <Header isGameEnded={isGameEnded} />
+        <Header isGameEnded={isGameEnded} isGameOvered={isGameOvered} />
         <Board target={target} />
         <div className={styles.message}>{message}</div>
       </div>
