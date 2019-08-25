@@ -84,16 +84,16 @@ const OnGoingPage = () => {
   const isGameEnded =
     isGameOvered || (selectedCell.selected && quizCount === FIND_GAME_END_IDX);
 
-  const renderProgress = () => {
-    const isDone = (count: number) => count < quizCount;
+  // const renderProgress = () => {
+  //   const isDone = (count: number) => count < quizCount;
 
-    const progress = ["ㄜ", "ㄘ", "ㄝ"].map((v, k) => (
-      <div key={v} className={isDone(k) ? styles.pgDone : styles.pgNotYet}>
-        {v}
-      </div>
-    ));
-    return <div className={styles.progressBar}>{progress}</div>;
-  };
+  //   const progress = ["ㄜ", "ㄘ", "ㄝ"].map((v, k) => (
+  //     <div key={v} className={isDone(k) ? styles.pgDone : styles.pgNotYet}>
+  //       {v}
+  //     </div>
+  //   ));
+  //   return <div className={styles.progressBar}>{progress}</div>;
+  // };
 
   const message = !isGameEnded
     ? ""

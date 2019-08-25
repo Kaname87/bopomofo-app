@@ -35,9 +35,9 @@ const Main2 = () => {
 
   return (
     <FindGameContext.Provider value={findGameContext}>
-      <Suspense fallback={<div>Loading...</div>}>
-        <div className={styles.gameWrapper}>{mainPage}</div>
-      </Suspense>
+      <div className={styles.gameWrapper}>
+        <Suspense fallback={<div>Loading...</div>}>{mainPage}</Suspense>
+      </div>
     </FindGameContext.Provider>
   );
 };
